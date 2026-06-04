@@ -1,61 +1,41 @@
 <div align="center">
-  <img src="icon.png" width="128" height="128" alt="Spid Launcher Icon" />
+  <img src="icon.png" width="128" height="128" alt="Spid Launcher" />
   <h1>Spid Launcher</h1>
-  <p><strong>A sleek, modern, offline Minecraft launcher built with Electron for maximum performance.</strong></p>
+  <p><strong>A fast, modern Minecraft launcher built for performance.</strong></p>
 </div>
 
 <br/>
 
-## Overview
+## About
 
-Spid Launcher is a fully-featured, ultra-fast custom Minecraft launcher designed to provide a seamless, modern experience for managing your Minecraft instances, mods, and performance settings. It bypasses clunky legacy systems to give you complete control over your game.
+Spid Launcher is a lightweight Minecraft launcher that gives you full control over your game. It handles version management, mod loader installation, and performance optimization so you can just focus on playing.
 
-### Key Features
-- **Seamless Instance Management**: A fluid, highly responsive interface for creating and managing multiple Minecraft instances effortlessly.
-- **Offline & Microsoft Accounts**: Play securely with your official Microsoft account, or easily add offline accounts for LAN/Cracked servers.
-- **Max Performance Engine**: Automatically downloads and injects top-tier performance mods (Sodium, Lithium, Embeddium, etc.) for both Fabric and Forge based on your loader choice.
-- **Aggressive JVM Tuning**: Ships with built-in Java garbage collection profiles (ZGC, G1GC, Shenandoah) and Tiered Compilation flags to squeeze out maximum FPS.
-- **Modrinth Integration**: Browse, search, and install Modpacks, Mods, Resource Packs, and Shaders directly from the Modrinth API.
-- **Discord Rich Presence**: Automatically updates your Discord status to show what you're playing and what mods you're browsing.
+## Features
 
-## Installation & Setup
+- **Instance Management** — Create and manage multiple Minecraft instances, each with their own version, mods, and settings.
+- **Mod Loader Support** — Supports Vanilla, Fabric, Quilt, Forge, and NeoForge out of the box.
+- **Offline and Microsoft Accounts** — Play with offline accounts or log in with your premium Microsoft account.
+- **Performance Engine** — Automatically downloads and injects performance mods (Sodium, Lithium, Embeddium, etc.) based on your mod loader. Pairs with aggressive JVM tuning profiles (ZGC, G1GC, Shenandoah) for maximum FPS.
+- **Modrinth Integration** — Search and install Modpacks, Mods, Resource Packs, and Shaders directly from the launcher.
+- **Discord Rich Presence** — Shows your friends what you're playing.
+- **Auto Java Detection** — Automatically finds or downloads the correct Java version for any Minecraft version.
 
-If you want to run or build the launcher from the source code, you'll need [Node.js](https://nodejs.org/) installed on your machine.
+## Installation
 
-1. **Clone or Download** this repository.
-2. Open a terminal in the folder and install the dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the launcher in development mode:
-   ```bash
-   npm start
-   ```
+1. Go to the [Releases](https://github.com/munthakiim/spid-launcher/releases) page.
+2. Download the latest `Spid Launcher Setup.exe`.
+3. Run the installer and follow the prompts.
+4. Open the launcher and start playing.
 
-## Building the `.exe`
+## System Requirements
 
-Spid Launcher uses `electron-builder` to package the app into a clean Windows installer. 
-
-> **Note for Windows Users:** You may need to run your terminal as an Administrator to successfully build the app locally, as `electron-builder` needs to create symbolic links.
-
-To build the installer, simply run:
-```bash
-npm run build
-```
-Once finished, you will find `Spid Launcher Setup.exe` inside the `dist` folder!
-
-## The Performance Engine
-
-Tired of lagging? The built-in **Performance Engine** does the heavy lifting for you. When the "Max FPS" preset is selected in the Settings menu, the launcher will:
-- Pass highly aggressive `-XX` flags to Java (enabling compressed pointers, disabling explicit GC, and tuning the JIT compiler).
-- Automatically download **Sodium, Lithium, and FerriteCore** if you launch a Fabric instance.
-- Automatically download **Embeddium, Canary, and Pluto** if you launch a Forge or NeoForge instance.
-
-## Project Structure
-- `/src/main.js` - Electron backend, IPC handlers, game downloading, and process spawning.
-- `/src/renderer/` - The frontend HTML/CSS/JS driving the beautiful user interface.
-- `/src/jvm-config.js` - The brains behind the aggressive Java argument generation.
-- `/src/download-manager.js` - A custom multi-threaded file downloader ensuring massive modpacks download fast and reliably.
+| | Minimum | Recommended |
+|---|---|---|
+| OS | Windows 10 | Windows 10/11 |
+| RAM | 4 GB | 8 GB |
+| Disk | 500 MB (plus game files) | 2 GB+ |
+| Network | Required for first-time downloads | Broadband |
 
 ## License
-This project is for educational and personal use. Asset downloads are powered by the incredible Modrinth API. Minecraft is a trademark of Mojang Synergies AB.
+
+This project is for educational and personal use. Minecraft is a trademark of Mojang Synergies AB. Mod downloads are powered by the [Modrinth API](https://modrinth.com).
